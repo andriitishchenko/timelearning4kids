@@ -2,31 +2,58 @@
 <HEAD>
     <META http-equiv=Content-Type content="text/html; charset=utf-8">
     <style type="text/css">
-      
+        canvas {
+          border: 1px dotted #ccc;
+        }
       .l{
         float: left;
+        display: inline-block;
       }
       .r{
-
+        display: inline-block;
       }      
       label{ display: block; }
+      
       @media print {
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        canvas {
+          padding-left: 0;
+          padding-right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          width: 450px;
+          height: 450px;
+          page-break-after:avoid;
+        }
+
         .noprint{
           display: none;
         }
+        /*.l{
+          float: none;
+          display: inline-block;
+        }
+        .r{
+          float: none;
+          display: inline-block;
+        }*/    
       }
     </style>
 </HEAD>
 <body>
 <div class=noprint>Use "Scale" % option for changing the size in Printer Settings popup</div>
 <div class="l">
-Face ✂ <br/>
-<canvas id="canvasf" width="500" height="500" style="border: 1px dotted #ccc">
+<span class=noprint> Face ✂ <br/></span>
+<canvas id="canvasf" width="450" height="450">
 </canvas>
 </div>
 <div class="r">
-Back<br/>
-<canvas id="canvasb" width="500" height="500" style="border: 1px dotted #ccc">
+<span class=noprint> Back<br/></span>
+<canvas id="canvasb" width="450" height="450">
 </canvas>
 </div>
 
